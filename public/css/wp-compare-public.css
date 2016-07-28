@@ -1,0 +1,113 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+
+ .post-sidebar {
+ 	float: left;
+ 	width: 20%;
+ 	padding: 2%;
+ 	border: 1px solid #d9d9d9;
+ }
+
+ .post-sidebar h2 {
+ 	font-size: 24px;
+ 	padding-bottom: 10px;
+ } 
+
+ .post-sidebar p {
+ 	font-size: 12px;
+ }
+
+ .post-sidebar form button {
+ 	margin: 20px 0;
+ 	font-size: 14px;
+ 	width: 110px;
+ }
+
+ .post-sidebar form label {
+ 	display: block;
+ 	margin: 10px 0;
+ 	margin-left: 15px;
+ }
+
+ .post-sidebar form input {
+ 	display: inline;
+ }
+
+
+ .post-compare {
+ 	float: left;
+ 	width: 75%;
+ 	margin-right: 5%;
+ }
+
+ .compare-header {
+ 	height: 250px;
+ 	background-size: cover !important;
+ 	text-align: center;
+ }
+
+ .content .container {
+ 	margin: 40px auto;
+ }
+
+ .compare-header h1 {
+ 	background: rgba(0, 0, 0, 0.7);
+ 	padding: 10px 30px;
+ 	font-size: 36px;
+ 	color: white;
+ 	text-align: center;
+ 	display: inline-block;
+ 	margin-top: 75px;
+ }
+
+
+ /* content */
+
+ .left {
+ 	float: left;
+ 	width: 36%;
+ 	margin-right: 8%;
+ }
+
+ .right {
+ 	float: left;
+ 	width: 56%;
+ }
+
+ .right h1 {
+ 	font-size: 26px;
+ }
+
+ .right .post-meta {
+ 	list-style-type: none;
+ 	margin: 15px 0;
+ }
+
+ .right .post-meta li {
+ 	padding: 5px 0;
+ }
+
+ .right .post-meta li .post-meta-key {
+ 	font-weight: bold;
+ }
+
+ .description {
+ 	clear: both;
+ 	padding: 60px 0;
+ }
+
+
+
+ @media screen and (max-width: 975px){
+ 	.post-sidebar {
+	 	float: none;
+	 	width: 100%;
+	}
+	.post-compare {
+	 	float: none;
+	 	width: 100%;
+	} 
+ }
