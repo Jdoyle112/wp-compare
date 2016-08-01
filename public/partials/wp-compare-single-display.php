@@ -29,7 +29,7 @@ get_header(); ?>
 								$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail_size' );
 								$url = $thumb['0']; 
 							?>		
-							<img src="<?php echo $url; ?>">
+							<img src="<?php echo esc_url( $url ); ?>">
 						</div>
 						<div class="right">
 							<h1><?php the_title(); ?></h1>

@@ -70,6 +70,16 @@
  	text-decoration: underline;
  }
 
+ .categories-form {
+ 	margin: 40px 0;
+ }
+
+ .categories-form input {
+ 	margin-left: 25px;
+ 	padding: 10px;
+ 	font-size: 14px;
+ }
+
  .left {
  	float: left;
  	width: 36%;

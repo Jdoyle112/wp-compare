@@ -5,10 +5,13 @@ get_header();
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$values = $_POST['checks'];
 	$reset = $_POST['reset'];
+	$categories = $_POST['categories'];
 	if(!empty($reset)){
 		$_SESSION['checks'] = '';
+		$_SESSION['cat'] = '';
 	}
 	$_SESSION['checks'] = $values;
+	$_SESSION['cat'] = $categories;
 }
 
 
@@ -26,11 +29,28 @@ if(!empty($_SESSION['checks'])){
 ?>
 <main class="content">
 	<div class="container">
+		<div class="categories-form">
+			<?php $tax_terms = get_terms($taxonomy); 
+				if($tax_terms){ ?>
+			<form method="post" action="#">
+				<select name="categories">
+			<?php 
+				foreach ($tax_terms as $val) { ?>
+					<option value="<?php echo $val->slug; ?>"><?php echo $val->name; ?></option>
+
+					<?php } ?>
+				</select>
+				<input type="submit" value="submit">
+			</form>
+			<?php } ?>
+		</div> 
 		<section>
 			<?php
+			echo $_SESSION['cat'];
 				$args = array(
 					'post_type' => 'comparables',
 					'ignore_sticky_posts' => 1,
+					'category_name' => $_SESSION['cat'],
 					'post__in' => $post_ids
 				);
 
