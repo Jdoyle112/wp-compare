@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
+Contributors: Jdoyle112
 Donate link: jackdoyle.co
 Tags: comments, spam
 Requires at least: 3.0.1
@@ -12,37 +12,22 @@ Use this plugin to create custom post types which can be compared against each o
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+Use this plugin to create custom post types which can be compared against each other by the end users. 
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+When the plugin is activated, a 'Comparables' custom post type will appear on the admin sidebar. Here, you can create your posts which will appear on the front-end (www.yourdomain.com/compare). Your posts can be grouped by category for easier clarification. For example, say you were an auto dealership. You could choose to group your posts into categories based on the type of vehicle (sedan, truck, coupe, etc.). 
 
-A few notes about the sections above:
+All your posts will have individual pages, as well as an archive for all the posts. From the archive page, users can choose individual posts to click on. On the individual post pages, a sidebar will appear with an option to add the current post to a list of posts to be compared. When the user is done selecting posts to be compared, they can press the 'Compare' button which will bring them back to the archive page with the results filtered. 
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
+To return all the results on the archive page, simply press the 'Reset' button. 
 
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
-
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+The information displayed for the posts on the archive page is determined by the featured image, and custom fields set within the individual posts on the back-end. For example, say you had a post which you wanted to display the price for. You would navigate to that post from the WordPress admin, and scroll to the Custom Fields section at the bottom. You would either press 'Enter new' or select the name from the drop down, and then give provide a value. That name and value will be displayed on the individual post page, as well as on the archive page. 
 
 == Installation ==
 
 
-1. Upload `wp-compare.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Upload `wp-compare.php` to the `/wp-content/plugins/` directory 
+2. Activate the plugin through the 'Plugins' menu in WordPress
+
 
 == Frequently Asked Questions ==
 
