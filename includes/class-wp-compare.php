@@ -157,15 +157,14 @@ class Wp_Compare {
 		// create post type
 		$this->loader->add_action('init', $plugin_admin, 'create_custom_post');
 
+		// start session
+		$this->loader->add_action('init', $plugin_admin, 'register_session');
+
 		// Add menu item
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_plugin_admin_menu' );
 
 		// register sidebar
 		$this->loader->add_action( 'widgets_init', $plugin_admin, 'create_sidebar' );
-
-		// allow form to submit to new page
-		$this->loader->add_action('admin_post_submit-form', $plugin_admin, 'form_submit');
-		$this->loader->add_action('admin_post_nopriv_submit-form', $plugin_admin, 'form_submit');
 
 		// Add Settings link to the plugin
 		$plugin_basename = plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_name . '.php' );
@@ -187,12 +186,11 @@ class Wp_Compare {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
-				// allow form to submit to new page
-		$this->loader->add_action('admin_post_submit-form', $plugin_public, 'form_submit');
-		$this->loader->add_action('admin_post_nopriv_submit-form', $plugin_public, 'form_submit');
-
 		// apply custom post template
 		$this->loader->add_filter( 'single_template', $plugin_public, 'custom_template' );		
+
+		// apply custom post archive template
+		$this->loader->add_filter( 'archive_template', $plugin_public, 'custom_archive_template' );	
 
 	}
 

@@ -19,6 +19,7 @@ get_header(); ?>
 		// Start the loop.
 		while ( have_posts() ) : the_post(); ?>
 		</section>
+		<a class="back" href="<?php echo get_bloginfo('url'); ?>/comparables">Back to Archive ></a>
 		<div class="container">	
 			<section class="post post-compare">
 				<section class="post-content">

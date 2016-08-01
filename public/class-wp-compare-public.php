@@ -116,10 +116,19 @@ class Wp_Compare_Public {
 	    }
 	}	
 
-		public function form_submit(){
-		echo 'hi';
-			include('wp-compare-page-display.php');
-		
-	}
+	// apply custom post type template
+	public function custom_archive_template($template){
+		global $wp_query, $post;
+
+		$plugin_path = plugin_dir_path( __FILE__ );
+		$template_name = 'wp-compare-page-display.php';
+
+	    if ($post->post_type == "comparables"){
+	        if(file_exists($plugin_path . 'partials/' . $template_name)){
+	            return $plugin_path . 'partials/' . $template_name;
+	        }
+	        return $template;
+	    }
+	}		
 
 }

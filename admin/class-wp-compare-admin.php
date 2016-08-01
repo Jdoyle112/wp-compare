@@ -145,10 +145,10 @@ class Wp_Compare_Admin {
 		));
 	}
 
-	public function form_submit(){
-		echo 'hi';
-			include('wp-compare-page-display.php');
-		
+	public function register_session(){
+		if(!session_id()){
+			session_start();
+		}
 	}
 
 }

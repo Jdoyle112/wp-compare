@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       WordPress Compare
  * Plugin URI:        https://github.com/jdoyle112
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Create custom posts which users can compare against each other on the front-end.
  * Version:           1.0.0
  * Author:            Jack Doyle
  * Author URI:        jackdoyle.co

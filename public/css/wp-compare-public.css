@@ -66,6 +66,10 @@
 
  /* content */
 
+ .back {
+ 	text-decoration: underline;
+ }
+
  .left {
  	float: left;
  	width: 36%;
@@ -81,7 +85,7 @@
  	font-size: 26px;
  }
 
- .right .post-meta {
+ .right .post-meta, .details .post-meta {
  	list-style-type: none;
  	margin: 15px 0;
  }
@@ -90,7 +94,7 @@
  	padding: 5px 0;
  }
 
- .right .post-meta li .post-meta-key {
+ .right .post-meta li .post-meta-key, .details .post-meta li .post-meta-key {
  	font-weight: bold;
  }
 
@@ -98,6 +102,41 @@
  	clear: both;
  	padding: 60px 0;
  }
+
+
+/* archive */
+
+.comparables-items .item {
+	width: 30%;
+	float: left;
+	margin-right: 5%;
+	border: 2px solid #d3d3d3;
+	border-radius: 2px;
+}
+
+.item:nth-child(3){
+	margin-right: 0;
+}
+
+.comparables-items h2 {
+	border-bottom: 2px solid #d3d3d3;
+	padding: 10px 15px;
+	width: 50%;
+}
+
+.comparables-items .item .image-wrap {
+	background-size: cover !important;
+	width: 100%;
+	height: 200px;
+}
+
+.comparables-items .details {
+	padding: 0 15px;
+}
+
+.reset {
+	margin-top: 60px;
+}
 
 
 
@@ -111,3 +150,20 @@
 	 	width: 100%;
 	} 
  }
+
+
+@media screen and (max-width: 900px){
+	.comparables-items .item {
+		width: 46%;
+		margin-right: 4%;
+	}
+
+	.item:nth-child(2){
+		margin-right: 0;
+	}
+
+	main.content {
+		padding: 0 30px;
+	}
+}
+
